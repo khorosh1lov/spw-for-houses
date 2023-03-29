@@ -1,0 +1,31 @@
+#house-stats {
+
+    .stats-table {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        & tr {
+            padding: 0;
+            line-height: $gap;
+
+            td {
+                width: 50vw;
+                padding: $sm-gap $gap;
+            }
+        }
+
+        & tr:nth-child(odd) {
+            background-color: $white;
+        }
+        & tr:nth-child(even) {
+            background-color: $light-grey;
+        }
+    }
+}
+
+/* Tablets */
+@media (min-width: 768px) {}
+
+/* Desktops */
+@media (min-width: 980px) {}

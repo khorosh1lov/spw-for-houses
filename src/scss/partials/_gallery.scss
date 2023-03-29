@@ -1,0 +1,30 @@
+#gallery {
+  column-count: 1;
+  column-gap: $gap;
+
+  a {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: $gap;
+  }
+
+  a img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+  #gallery {
+    column-count: 2;
+  }
+}
+
+/* Desktops */
+@media (min-width: 980px) {
+  #gallery {
+    column-count: 3;
+  }
+}

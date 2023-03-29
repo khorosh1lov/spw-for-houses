@@ -1,0 +1,58 @@
+#house-footer {
+    width: 100%;
+
+    @include flex-center;
+    gap: $gap;
+
+    padding: $lg-gap 0 $lg-gap*2;
+    background: $light-grey;
+
+    .company-logo {
+        width: 240px;
+    }
+
+    .company-info {
+        @include flex-center;
+        gap: 0;
+
+        h3 {
+            font-size: $large-font-size;
+            margin-bottom: 0;
+        }
+
+        p {
+            font-size: $medium-font-size;
+            margin-bottom: 0;
+        }
+    }
+
+    .copyright {
+        @include flex-center;
+
+        .eho-logo {
+            width: 40px;
+            margin-bottom: $sm-gap;
+        }
+
+        p {
+            font-size: $normal-font-size;
+            margin-bottom: 0;
+        }
+    }
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+    #house-footer {
+        padding: $lg-gap 0;
+
+        .copyright {
+            p {
+                font-size: $small-font-size;
+            }
+        }
+    }
+}
+
+/* Desktops */
+@media (min-width: 980px) {}

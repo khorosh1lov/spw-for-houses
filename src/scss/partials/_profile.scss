@@ -1,0 +1,95 @@
+#house-contacts {
+    width: 100%;
+
+    @include flex-center;
+
+    .profiles {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .agent-profile {
+        @include flex-center;
+        flex-direction: row;
+        gap: $gap;
+        margin-bottom: $gap;
+
+        background: $light-grey;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .agent-profile_avatar {
+            width: 40vw;
+            height: auto;
+        }
+
+        .agent-profile_info {
+            width: 60vw;
+            padding-right: $gap;
+
+            .agent-profile_name {
+                font-size: $medium-font-size;
+                margin-bottom: $sm-gap;
+            }
+
+            .agent-profile_title,
+            .agent-profile_phone,
+            .agent-profile_email {
+                font-size: $normal-font-size;
+                margin-bottom: $sm-gap;
+            }
+
+            .agent-profile_email a {
+                color: $black;
+            }
+        }
+    }
+.house-agent_button-profile {
+        display: none;
+    }
+    
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+    #house-contacts {
+
+        .profiles {
+            flex-direction: row;
+        }
+
+        .agent-profile {
+            flex-direction: row;
+            margin-bottom: 0;
+
+            .agent-profile_avatar {
+                width: 30%;
+            }
+
+            .agent-profile_info {
+                width: 70%;
+
+                .agent-profile_name {
+                    font-size: $large-font-size;
+                }
+
+                .agent-profile_title,
+                .agent-profile_phone,
+                .agent-profile_email {
+                    font-size: $medium-font-size;
+                }
+            }
+        }
+
+        .house-agent_button-profile {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+    }
+    }
+}
+
+/* Desktops */
+@media (min-width: 980px) {}

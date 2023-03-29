@@ -1,0 +1,153 @@
+.top {
+  position: fixed;
+  top: $lg-gap;
+  right: $lg-gap;
+  z-index: 999;
+  width: 100%;
+
+  @include flex-right;
+
+  .menu__open,
+  .menu__close {
+    position: relative;
+    z-index: 9999;
+    background: none;
+    padding: $sm-gap / 2 $sm-gap;
+    color: $white;
+    border: 2px solid $white;
+    border-radius: .35rem;
+    background: rgba(40, 40, 40, .4);
+    cursor: pointer;
+  }
+
+  i {
+    font-size: $large-font-size;
+  }
+
+  .menu__wrapper {
+    @include flex-center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 99999;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+
+    background-color: rgba(20, 20, 20, .8);
+
+    .menu__close {
+      position: absolute;
+      right: $lg-gap;
+      top: $lg-gap;
+    }
+  }
+
+  .open {
+    transform: translateX(0%);
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .navbar>.navbar-container {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    @include flex-center;
+    flex-direction: column;
+    gap: $gap;
+
+    li {
+      padding: $gap 0;
+      border: 2px solid $white;
+      border-radius: .5rem;
+      background-color: rgba(20, 20, 20, .8);
+      width: 70vw;
+      text-align: center;
+    }
+
+    a {
+      color: $white;
+      text-decoration: none;
+      font-size: $large-font-size;
+      padding: $gap $lg-gap * 1.5;
+    }
+  }
+
+  .black {
+    color: $black;
+    border-color: $black;
+    background: rgba(255, 255, 255, .4);
+  }
+
+}
+
+/* Desktops */
+@media (min-width: 980px) {
+    .top {
+          align-items: center;
+          right: 0;
+    .menu__open,
+    .menu__close {
+      display: none;
+    }
+
+    .menu__wrapper {
+      position: relative;
+    @include flex-center;
+      align-items: flex-start;
+    flex-direction: row;
+    justify-content: center;
+    z-index: 99999;
+    transform: translateX(0);
+    transition: transform 0.3s ease-in-out;
+    visibility: visible;
+    opacity: 1;
+    padding: 0;
+
+    background-color: transparent;
+
+    .navbar {
+      display: flex;
+
+      .navbar-container {
+        @include flex-center;
+        flex-direction: row;
+        gap: $gap;
+
+        li {
+          padding: $sm-gap $sm-gap*1.5;
+          border: 2px solid $white;
+          border-radius: .5rem;
+          background-color: rgba(0,0,0,0.65);
+          width: 100%;
+          text-align: center;
+
+          
+        }
+
+        a {
+    font-size: 1.25rem;
+    padding: $sm-gap $sm-gap*1.5;
+          }
+      }
+    }
+
+    .menu__close {
+      position: absolute;
+      right: $lg-gap;
+      top: $lg-gap;
+    }
+  }
+  }
+}

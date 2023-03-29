@@ -1,0 +1,26 @@
+/* Vendors */
+@import './vendor/_normalize.css';
+@import './vendor/_animate.min.css';
+@import './vendor/_lightgallery-bundle.css';
+
+/* Font Awesome */
+@import "./fontawesome/fontawesome";
+@import "./fontawesome/solid";
+@import "./fontawesome/brands";
+
+/* BLocks */
+@import './partials/@mixins';
+@import './partials/vars';
+@import './partials/fonts';
+@import './partials/global';
+@import './partials/button';
+@import './partials/modal';
+@import './partials/header';
+@import './partials/navbar';
+@import './partials/hero';
+@import './partials/gallery';
+@import './partials/stats';
+@import './partials/player';
+@import './partials/map';
+@import './partials/profile';
+@import './partials/footer';

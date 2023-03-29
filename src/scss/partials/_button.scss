@@ -1,0 +1,38 @@
+.house-agent_contact-button {
+    background: $green;
+    border: 0;
+    border-radius: .25rem;
+    color: $white;
+    padding: $gap $lg-gap;
+    font-size: $large-font-size;
+    cursor: pointer;
+
+    transition: .2s ease-in-out;
+}
+
+.house-agent_contact-button:hover,
+.house-agent_contact-button:active {
+    outline: none;
+    background: darken($color: $green, $amount: 15)
+}
+
+.sticked-to-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+.sticked-button {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+    .sticked-button {
+        display: none;
+    }
+}

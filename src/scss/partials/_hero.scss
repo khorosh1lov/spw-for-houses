@@ -1,0 +1,85 @@
+.house-hero {
+    background-image: url('../images/house-hero.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+    min-height: 100vh;
+
+    color: #fff;
+
+    @include flex-center;
+
+    margin-bottom: 0;
+}
+
+.house-hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(40, 40, 40, .6);
+    min-height: 100vh;
+}
+
+.house-introduction,
+.scroll-to-information {
+    @include flex-center;
+    gap: $gap;
+    padding: 0 $gap;
+
+    position: relative;
+    z-index: 100;
+
+    .house-title {
+        margin-bottom: $lg-gap;
+    }
+
+    .house-price {
+        font-size: $extra-large-font-size;
+    }
+
+    .house-address {
+        font-size: $medium-font-size;
+        text-align: center;
+    }
+
+    .house-agent {
+        margin-top: $lg-gap;
+    }
+}
+
+.scroll-to-information {
+    position: absolute;
+    bottom: $gap;
+    font-size: $extra-large-font-size;
+    color: $white;
+    text-decoration: none;
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+
+    .scroll-to-information {
+    bottom: $gap;
+    font-size: $extra-large-font-size*1.5;
+}
+
+
+    .house-introduction,
+    .scroll-to-information {
+        .house-price {
+            font-size: $extra-large-font-size*2;
+        }
+
+        .house-address {
+            font-size: $large-font-size;
+            text-align: center;
+        }
+    }
+}
+
+/* Desktops */
+@media (min-width: 980px) {}

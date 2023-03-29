@@ -1,0 +1,139 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: $font-main;
+}
+
+main {
+    background-color: #fafafa;
+    padding-top: $lg-gap;
+}
+
+.no-scroll {
+    overflow: hidden;
+    height: 100%;
+}
+
+section {
+    @include flex-center;
+    margin-bottom: $lg-gap;
+
+    .container,
+    .container-media {
+        max-width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 0 $gap;
+
+        .wrapper {
+            max-width: 980px;
+            margin: auto;
+        }
+    }
+
+    .container-media {
+        width: 100%;
+        padding: 0;
+
+        .media-title {
+            padding: 0 $gap;
+        }
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+    margin: 0 0 $gap;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: $extra-large-font-size;
+}
+
+p, td {
+    font-size: $medium-font-size;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font-headline;
+}
+
+h1 {
+    font-size: $extra-large-font-size;
+}
+
+p,
+a,
+span {
+    font-family: $font-main;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: rgba(0, 0, 0, .65);
+    z-index: 999;
+    pointer-events: none;
+
+    &.active {
+        pointer-events: all;
+        opacity: 1;
+    }
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+    h1 {
+        font-size: $extra-large-font-size*2;
+    }
+
+    section {
+        .container-media {
+            .media-title {
+                padding: 0 $gap;
+            }
+        }
+    }
+}
+
+/* Desktops */
+@media (min-width: 980px) {
+    section {
+        .container-media {
+            .media-title {
+                padding: 0;
+            }
+        }
+    }
+}
